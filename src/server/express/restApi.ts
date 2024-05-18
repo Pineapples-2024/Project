@@ -23,6 +23,7 @@ app.use(
     })
 );
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json({}));
 
 app.post(`${ROOT_URL}login`, (req, res) => {
     const name = req.body.username;
