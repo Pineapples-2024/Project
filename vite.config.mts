@@ -1,8 +1,7 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import eslint from "vite-plugin-eslint";
-import Pages from "vite-plugin-pages";
 import path from "path";
+import { defineConfig } from "vite";
+import Pages from "vite-plugin-pages";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +9,6 @@ export default defineConfig({
   envDir: "../",
   plugins: [
     react(),
-    eslint(),
     Pages({
       pagesDir: [{ dir: "pages", baseRoute: "" }],
       extensions: ["tsx"],
