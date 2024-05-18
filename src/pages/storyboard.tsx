@@ -1,6 +1,14 @@
+import { useState } from "react";
+
 function Storyboard() {
+  const [ state, setState  ] = useState(0);
+
   return <>
-    Better storyboard!
+    Better better better storyboard!
+
+    <p>{state}</p>
+
+    <button onClick={() => setState(1)}>hi</button>
   </>
 }
 
