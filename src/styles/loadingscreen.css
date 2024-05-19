@@ -1,0 +1,46 @@
+div.loading-screen{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffeeda;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+div.loading-screen.loaded {
+    opacity: 0;
+}
+
+div.loading{
+    display: block;
+    height: 50px;
+    width: 100px;
+    border: 10px powderblue;
+    animation: bounce 1.5s ease-in-out infinite;
+    text-align: center;
+}
+div.loading img{
+    margin: auto;
+    
+}
+div.loading *{
+    display: block;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,96 @@
+.camera-output-window {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s, transform 0.5s;
+    pointer-events: none;
+}
+
+.camera-output-window video {
+    position: absolute;
+    width: 100%;
+}
+
+.camera-output canvas {
+    display: none;
+}
+
+.camera-output-window.enabled {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+}
+
+.camera-output-window .ui-top {
+    position: absolute;
+    background: transparent;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 80px;
+    z-index: 2;
+    flex: 1;
+}
+
+.camera-output-window .ui-top button {
+    border: none;
+    cursor: pointer;
+}
+
+.camera-output-window .aimer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.camera-output-window .aimer img {
+    width: 60vw;
+}
+
+.camera-output-window .camera-output {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    z-index: 1;
+}
+
+.camera-output-window .capture-bar {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    bottom: 0px;
+    background: #0c064f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 20vh;
+    z-index: 2;
+}
+
+.camera-ui-overlays {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 4;
+}
+
+.camera-output {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}

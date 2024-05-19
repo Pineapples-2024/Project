@@ -1,0 +1,56 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 30px;
+    font-family: Outfit;
+}
+
+nav .brand {
+    width: 50px;
+}
+
+nav .hyperlinks {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    font-size: 20px;
+    align-items: center;
+}
+
+nav .hyperlinks a {
+    color: #3a338a;
+    text-decoration: none;
+}
+
+nav .hyperlinks a.focused {
+    color: #0c064f;
+    text-decoration: underline;
+}
+
+.profile .profile-icon {
+    width: 45px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 0px black;
+    background: #ffffff;
+    transition: box-shadow 1s, background 1s;
+}
+
+.profile .profile-icon:hover {
+    background: #d8d8d8;
+    box-shadow: 0px 0px 10px rgb(109, 109, 109);
+    cursor: pointer;
+}
+
+@media screen and (width < 720px) {
+    nav {
+        gap: unset;
+        justify-content: space-between;
+    }
+
+    nav .hyperlinks {
+        gap: unset;
+        justify-content: space-evenly;
+    }
+}
