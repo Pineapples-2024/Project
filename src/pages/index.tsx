@@ -1,11 +1,18 @@
+import "./index.css";
 
-
-const HomePage = (): JSX.Element => {
-    
-
+// loading page
+function Loading() {
     return (
-        <></>
+        <>
+            <div className="loading-screen">
+                <div className="loading">
+                    <img src="../public/images/logo.png" width="30px">
+                    </img>
+                    <span>Loading</span>
+                </div>
+            </div>    
+        </>
     );
-};
+}
 
-export default HomePage;
+export default Loading;
