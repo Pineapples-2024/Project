@@ -1,12 +1,14 @@
-import packageJSON from "../../../package.json";
-import express, { Application } from "express";
-import cors from "cors";
-
 import { ROOT_URL } from "@/constants";
+import cors from "cors";
+import express, { Application } from "express";
 import { Request, Response } from "express";
+
+import packageJSON from "../../../package.json";
 
 const app: Application = express();
 
+// random testing
+// unused
 const accounts: Record<string, string> = {
     oscar: "123",
     kamal: "k$7p3",
@@ -80,6 +82,10 @@ app.get(`${ROOT_URL}version`, (req: Request, res: Response) => {
         envVal: process.env.ENV_VALUE as string, // sample server-side env value
     };
     res.send(respObj);
+});
+
+app.get(`${ROOT_URL}generate`, (req, res) => {
+    console.log(req.query.d)
 });
 
 app.use(express.static("./.local/vite/dist"));
